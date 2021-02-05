@@ -1,6 +1,6 @@
 {
   "name": "aem-use-sprite-plugin",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Webpack loader for creating SVG sprites",
   "keywords": [
     "svg",
