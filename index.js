@@ -1,5 +1,6 @@
 const fs = require("fs");
 const _uniq = require("lodash/uniq");
+const validateOptions = require("schema-utils");
 const SpriteLoaderPlugin = require("svg-sprite-loader/plugin");
 
 const NAMESPACE = "AEM Use Sprite Plugin";
