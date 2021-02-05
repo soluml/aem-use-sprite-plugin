@@ -16,6 +16,10 @@
   "license": "MIT",
   "author": "soluml",
   "repository": "soluml/aem-use-sprite-plugin",
+  "main": "index.js",
+  "engines": {
+    "node": ">=7"
+  },
   "dependencies": {
     "lodash": "^4.17.20",
     "schema-utils": "^3.0.0"

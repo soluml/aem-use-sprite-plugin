@@ -2,7 +2,7 @@
 
 [![npm version](https://badge.fury.io/js/aem-use-sprite-plugin.svg)](http://badge.fury.io/js/aem-use-sprite-plugin)
 
-A wrapper plugin for [SVG Sprite Loader](https://github.com/JetBrains/svg-sprite-loader). This plugin generates a [JavaScript Use-API JS](https://experienceleague.adobe.com/docs/experience-manager-htl/using/htl/use-api-javascript.html) file containing the dynamically generated path(s) of your SVG sprites which can be used in your HTL/Sightly files.
+A wrapper plugin for [SVG Sprite Loader](https://github.com/JetBrains/svg-sprite-loader). This plugin generates a [JavaScript Use-API JS](https://experienceleague.adobe.com/docs/experience-manager-htl/using/htl/use-api-javascript.html) file containing the dynamically generated path(s) of your SVG sprites which can be used in your HTL/Sightly files. This is very useful if your clientlibs are dynamically named or if you prefer to provide hashes with your sprites.
 
 ## Example Configuration
 
@@ -25,7 +25,8 @@ plugins: [
       options: {
         symbolId: '[name]',
         extract: true,
-        spriteFilename: `[chunkname]/resources/sprite-[hash].svg`, // must be under resources, [chunkname] here is the clientlib/entry name
+        // sprite file must be under resources; [chunkname] here represents the clientlib (entry) name
+        spriteFilename: `[chunkname]/resources/sprite-[hash].svg`,
       },
     },
     'svgo-loader',
@@ -66,7 +67,7 @@ _icon.html_
 ```html
 <!--/* 
   icon: selector containing the symbol id
-  path: an optional integer describing which sprite path (if multiple) to use (always defaults to the first)
+  path: an optional integer describing which sprite path (if multiple) to use
 */-->
 <sly
   data-sly-test.icon="${request.requestPathInfo.selectors[0]}"
