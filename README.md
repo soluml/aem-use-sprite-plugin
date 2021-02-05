@@ -27,7 +27,7 @@ plugins: [
       options: {
         symbolId: '[name]',
         extract: true,
-        // sprite file must be under resources; [chunkname] here represents the clientlib (entry) name
+        // the sprite file must be under resources; [chunkname] here represents the clientlib (entry) name
         spriteFilename: `[chunkname]/resources/sprite-[hash].svg`,
       },
     },
