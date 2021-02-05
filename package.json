@@ -1,0 +1,26 @@
+{
+  "name": "aem-use-sprite-plugin",
+  "version": "1.0.0",
+  "description": "Webpack loader for creating SVG sprites",
+  "keywords": [
+    "svg",
+    "sprite",
+    "svg sprite",
+    "webpack",
+    "webpack plugin",
+    "aem",
+    "aem use"
+  ],
+  "homepage": "https://github.com/soluml/aem-use-sprite-plugin#readme",
+  "bugs": "https://github.com/soluml/aem-use-sprite-plugin/issues",
+  "license": "MIT",
+  "author": "soluml",
+  "repository": "soluml/aem-use-sprite-plugin",
+  "dependencies": {
+    "lodash": "^4.17.20",
+    "schema-utils": "^3.0.0"
+  },
+  "peerDependencies": {
+    "svg-sprite-loader": "^5.0.0"
+  }
+}
