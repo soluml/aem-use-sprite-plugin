@@ -10,6 +10,8 @@ A wrapper plugin for [SVG Sprite Loader](https://github.com/JetBrains/svg-sprite
 // under plugins
 plugins: [
   new AEMUseSpritePlugin({
+    // This `spriteLoaderOptions` object is passed to the underlying Sprite Loader Plugin: https://github.com/JetBrains/svg-sprite-loader#plain-sprite
+    spriteLoaderOptions: undefined,
     clientlibLocation: `FOLDER_CONTAINING_SPRITE`,
     outputUseFileLocation: `/apps/project/components/icon/icon.use.js`,
   }),
