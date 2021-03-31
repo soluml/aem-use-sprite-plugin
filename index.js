@@ -1,4 +1,5 @@
 const fs = require("fs");
+const path = require("path");
 const _uniq = require("lodash/uniq");
 const { validate } = require("schema-utils");
 const SpriteLoaderPlugin = require("svg-sprite-loader/plugin");
@@ -35,7 +36,7 @@ class AEMUseSpritePlugin {
     } = options;
 
     this.SpriteLoaderPlugin = new SpriteLoaderPlugin(spriteLoaderOptions);
-    this.clientlibLocation = clientlibLocation;
+    this.clientlibLocation = clientlibLocation || "";
     this.outputUseFileLocation = outputUseFileLocation;
   }
 
@@ -50,7 +51,7 @@ class AEMUseSpritePlugin {
       );
 
       const spriteDetails = Object.entries(stats.compilation.assets)
-        .filter(([key]) => generatedSprites.includes(key))
+        .filter(([key]) => generatedSprites.some((s) => key.includes(s)))
         .map(([key, details]) => ({
           key,
           details,
